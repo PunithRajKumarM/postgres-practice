@@ -1,3 +1,4 @@
+--Added to git
 CREATE DATABASE empDetail;
 
 CREATE TABLE employee(
@@ -20,23 +21,23 @@ values ('emma', 23, 'emma@gmail.com', 'female', 'la');
 insert into employee (ename, age, email, gender, city)
 values ('monica', 24, 'monica@gmail.com', 'female', 'wdc');
 
-MAX, MIN, SUM, AVG, ROUND
+--MAX, MIN, SUM, AVG, ROUND
 Select max(age), 
 min(age), 
 sum(age), 
 avg(age), round(avg(age)) from employee;
 
-ORDER BY
+--ORDER BY
 SELECT * FROM employee ORDER BY age desc;
 
-LIKE
+--LIKE
 SELECT * FROM employee WHERE ename LIKE '_a%';
 
-ILIKE
+--ILIKE
 SELECT * from employee where ename ilike '_AR%'
 
-HAVING, AS
+--HAVING, AS
 select age, count(age) as totalAge from employee group by age;
 
-LIMIT
+--LIMIT
 select * from employee order by id desc limit 2;
